@@ -834,7 +834,7 @@
         let currentSessionId = null;
         let conversationHistory = [];
         let authToken = null;
-        let ismarket approaching = false;
+        let isProcessing = false;
         
         // Voice recording state
         let mediaRecorder = null;
@@ -861,10 +861,10 @@
             messageInput.addEventListener('input', (e) => {
                 const hasText = e.target.value.trim().length > 0;
                 const sendButton = document.getElementById('send-button');
-                const shouldEnable = hasText && !ismarket approaching;
+                const shouldEnable = hasText && !isProcessing;
                 sendButton.disabled = !shouldEnable;
                 
-                console.log('Input changed:', { hasText, ismarket approaching, disabled: sendButton.disabled });
+                console.log('Input changed:', { hasText, isProcessing, disabled: sendButton.disabled });
                 
                 // Auto-resize textarea
                 e.target.style.height = 'auto';
@@ -1023,9 +1023,9 @@
             const input = document.getElementById('message-input');
             const message = input.value.trim();
             
-            if (!message || ismarket approaching) return;
+            if (!message || isProcessing) return;
             
-            ismarket approaching = true;
+            isProcessing = true;
             input.value = '';
             input.style.height = '60px'; // Reset height
             document.getElementById('send-button').disabled = true;
@@ -1089,7 +1089,7 @@
                 document.getElementById('typing-indicator').classList.remove('visible');
                 showError('Failed to send message. Please try again.');
             } finally {
-                ismarket approaching = false;
+                isProcessing = false;
                 document.getElementById('send-button').disabled = false;
             }
         }
