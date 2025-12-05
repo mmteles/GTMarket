@@ -284,9 +284,10 @@ html {
     display: flex;
     gap: 0.75rem;
     align-items: center;
+    z-index: 100;
 }
 
-.send-button, .mic-button {
+#send-button, #mic-button {
     width: 48px;
     height: 48px;
     padding: 0;
@@ -303,13 +304,20 @@ html {
     align-items: center;
     justify-content: center;
     position: relative;
+    z-index: 101;
 }
 
-.send-button:hover, .mic-button:hover {
+#send-button:hover, #mic-button:hover {
     background: linear-gradient(135deg, var(--halloween-orange) 0%, var(--halloween-blood) 100%);
 }
 
-.mic-button svg, .send-button svg, .mic-button span, .send-button span {
+#send-button:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+}
+
+.mic-button svg, .send-button svg, .mic-button span, .send-button span,
+#mic-button svg, #send-button svg, #mic-button span, #send-button span {
     pointer-events: none;
 }
 
@@ -510,8 +518,8 @@ html {
     align-items: center;
     padding: 1rem 0;
     border-bottom: none;
-    color: #000000 !important;
-    background: #ffffff !important;
+    color: #ffffff !important;
+    background: #333333 !important;
     font-size: 1.1rem;
     font-weight: 700;
     margin-bottom: 0.5rem;
@@ -526,11 +534,11 @@ html {
 .component-name {
     flex: 1;
     font-weight: 700;
-    color: #000000 !important;
+    color: #ffffff !important;
 }
 
 .component-item span {
-    color: #000000 !important;
+    color: #ffffff !important;
 }
 
 /* Tables */
@@ -545,8 +553,8 @@ th, td {
     border: 2px solid var(--halloween-purple);
     padding: 1rem;
     text-align: left;
-    color: #000000 !important;
-    background: #ffffff !important;
+    color: #ffffff !important;
+    background: #333333 !important;
     font-size: 1.1rem;
     font-weight: 700;
 }
@@ -560,7 +568,7 @@ th {
 }
 
 tr:hover td {
-    background: #f0f0f0 !important;
+    background: #444444 !important;
 }
 
 /* Spooky Effects */
@@ -592,6 +600,22 @@ tr:hover td {
     margin: 0 auto;
     padding: 0 1rem;
     position: relative;
+}
+
+.input-wrapper .input-box {
+    position: relative;
+    z-index: 1;
+}
+
+.input-wrapper .button-group {
+    position: absolute;
+    z-index: 100;
+}
+
+.input-wrapper #send-button,
+.input-wrapper #mic-button {
+    position: relative;
+    z-index: 101;
 }
 
 /* Force black backgrounds everywhere */
