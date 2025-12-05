@@ -88,8 +88,15 @@ export class GeminiSummarizationService {
     const feedbackContext = this.buildFeedbackContext(sessionId);
     const interactionCount = conversationHistory.length;
 
-    return `You are an AI assistant helping to create Standard Operating Procedures (SOPs). 
-Your task is to analyze the conversation history and generate a comprehensive workflow summary.
+    return `You are an expert product and marketing specialist helping to create Go-To-Market (GTM) Strategic Plans. 
+Your task is to analyze the conversation history and generate a comprehensive GTM strategy summary.
+
+A complete GTM Strategic Plan should include these 5 critical sections:
+1. **Market Analysis** - Target market, customer segments, competitive landscape, and market opportunity
+2. **Value Proposition** - Unique selling points, product positioning, and key differentiators
+3. **Go-To-Market Strategy** - Distribution channels, pricing strategy, sales approach, and partnership opportunities
+4. **Marketing & Launch Plan** - Marketing channels, messaging, content strategy, and launch timeline
+5. **Success Metrics** - KPIs, revenue targets, customer acquisition goals, and measurement framework
 
 CONVERSATION HISTORY:
 ${conversationText}

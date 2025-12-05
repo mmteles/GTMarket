@@ -128,6 +128,12 @@ export function createApp(): Application {
     routeSpecificMonitoring('sops'),
     sopRoutes
   );
+  // GTM routes (alias for SOP routes)
+  app.use('/api/gtms', 
+    rateLimit(rateLimitConfigs.sopGeneration), 
+    routeSpecificMonitoring('gtms'),
+    sopRoutes
+  );
   app.use('/api/summarization', 
     rateLimit(rateLimitConfigs.general), 
     routeSpecificMonitoring('summarization'),

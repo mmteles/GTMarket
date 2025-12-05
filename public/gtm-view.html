@@ -682,7 +682,7 @@
         }, 1500);
 
         // Get GTM Plan data from URL or sessionStorage
-        async function loadGTM PlanDocument() {
+        async function loadGTMPlanDocument() {
             try {
                 const urlParams = new URLSearchParams(window.location.search);
                 const sessionId = urlParams.get('sessionId');
@@ -742,11 +742,11 @@
                 console.log('GTM Plan generated successfully:', gtmDocument);
                 
                 // Store GTM Plan data for export
-                sessionStorage.setItem('currentGTM PlanData', JSON.stringify(gtmDocument));
-                sessionStorage.setItem('currentGTM PlanId', sessionId);
+                sessionStorage.setItem('currentGTMPlanData', JSON.stringify(gtmDocument));
+                sessionStorage.setItem('currentGTMPlanId', sessionId);
                 
                 clearInterval(progressInterval);
-                renderGTM PlanDocument(gtmDocument);
+                renderGTMPlanDocument(gtmDocument);
                 
             } catch (error) {
                 console.error('Error loading GTM Plan:', error);
@@ -757,7 +757,7 @@
 
 
 
-        function renderGTM PlanDocument(gtm) {
+        function renderGTMPlanDocument(gtm) {
             const container = document.getElementById('document');
             
             // Debug logging
@@ -1088,7 +1088,7 @@ ${chart.mermaidCode}
 
         // Export document function
         async function exportDocument(format) {
-            const gtmData = sessionStorage.getItem('currentGTM PlanData');
+            const gtmData = sessionStorage.getItem('currentGTMPlanData');
             
             if (!gtmData) {
                 alert('No GTM Plan data available for export. Please generate the GTM Plan first.');
@@ -1109,7 +1109,7 @@ ${chart.mermaidCode}
             try {
                 const urlParams = new URLSearchParams(window.location.search);
                 const sessionId = urlParams.get('sessionId');
-                const parsedGTM PlanData = JSON.parse(gtmData);
+                const parsedGTMPlanData = JSON.parse(gtmData);
                 
                 const API_BASE = window.location.hostname === 'localhost' 
                     ? 'http://localhost:3000/api' 
@@ -1125,7 +1125,7 @@ ${chart.mermaidCode}
                     },
                     body: JSON.stringify({
                         format: format,
-                        gtmData: parsedGTM PlanData,
+                        gtmData: parsedGTMPlanData,
                         options: {
                             includeMetadata: true,
                             headerFooter: {
@@ -1143,9 +1143,9 @@ ${chart.mermaidCode}
                     const a = document.createElement('a');
                     a.href = url;
                     
-                    const title = parsedGTM PlanData.metadata?.title || parsedGTM PlanData.title || 'GTM Plan';
+                    const title = parsedGTMPlanData.metadata?.title || parsedGTMPlanData.title || 'GTM Plan';
                     const cleanTitle = title.replace(/[^a-zA-Z0-9]/g, '_');
-                    const version = parsedGTM PlanData.metadata?.version || parsedGTM PlanData.version || '1.0';
+                    const version = parsedGTMPlanData.metadata?.version || parsedGTMPlanData.version || '1.0';
                     const extension = format === 'md' ? 'md' : format;
                     a.download = `${cleanTitle}_v${version}.${extension}`;
                     
@@ -1169,7 +1169,7 @@ ${chart.mermaidCode}
         }
 
         // Load document on page load
-        document.addEventListener('DOMContentLoaded', loadGTM PlanDocument);
+        document.addEventListener('DOMContentLoaded', loadGTMPlanDocument);
     </script>
 </body>
 </html>

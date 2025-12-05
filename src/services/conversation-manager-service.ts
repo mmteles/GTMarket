@@ -233,12 +233,12 @@ export class ConversationManagerService implements ConversationManager {
       logger.error('Failed to generate AI response in initialization:', error);
       // Fallback to comprehensive question
       return {
-        message: "Thank you for starting to describe your workflow. To create a comprehensive SOP, please provide: the complete sequence of steps from start to finish, who is responsible for each step, what inputs and resources are needed, what outputs are produced, any dependencies or prerequisites, and how exceptions or errors are handled.",
+        message: "Thank you for starting to describe your product and market. To create a comprehensive GTM Strategic Plan, please provide: your target market and customer segments, your product's unique value proposition, your competitive landscape, your planned distribution and sales channels, your pricing strategy, and your key success metrics.",
         requiresConfirmation: false,
         suggestedActions: [
-          'Describe complete process flow',
-          'Explain roles and responsibilities',
-          'Detail inputs, outputs, and dependencies'
+          'Describe target market and customers',
+          'Explain value proposition and positioning',
+          'Detail distribution channels and pricing'
         ],
         shouldReadAloud: true,
         nextState: ConversationState.GATHERING_DETAILS
@@ -351,12 +351,12 @@ export class ConversationManagerService implements ConversationManager {
     if (input.type === UserInputType.CONFIRMATION) {
       if (input.content.toLowerCase().includes('yes') || input.content.toLowerCase().includes('correct')) {
         return {
-          message: "Perfect! Your workflow has been validated. Would you like to proceed with SOP generation or make any final refinements?",
+          message: "Perfect! Your GTM strategy has been validated. Would you like to proceed with GTM Strategic Plan generation or make any final refinements?",
           requiresConfirmation: true,
           suggestedActions: [
-            'Generate SOP',
+            'Generate GTM Plan',
             'Make refinements',
-            'Review workflow'
+            'Review strategy'
           ],
           shouldReadAloud: true,
           nextState: ConversationState.FINALIZATION
@@ -422,12 +422,12 @@ export class ConversationManagerService implements ConversationManager {
   ): Promise<ConversationResponse> {
     if (input.type === UserInputType.CONFIRMATION) {
       return {
-        message: "Excellent! Your workflow is now ready for SOP generation. The system will create a comprehensive Standard Operating Procedure based on our conversation.",
+        message: "Excellent! Your GTM strategy is now ready for document generation. The system will create a comprehensive Go-To-Market Strategic Plan based on our conversation.",
         requiresConfirmation: false,
         suggestedActions: [
-          'Generate SOP',
+          'Generate GTM Plan',
           'Export document',
-          'Start new workflow'
+          'Start new strategy'
         ],
         shouldReadAloud: true,
         nextState: ConversationState.FINALIZATION
@@ -435,12 +435,12 @@ export class ConversationManagerService implements ConversationManager {
     }
 
     return {
-      message: "Please confirm if you're ready to proceed with SOP generation, or let me know if you need any final adjustments.",
+      message: "Please confirm if you're ready to proceed with GTM Strategic Plan generation, or let me know if you need any final adjustments.",
       requiresConfirmation: true,
       suggestedActions: [
         'Confirm and proceed',
         'Make final changes',
-        'Review workflow'
+        'Review strategy'
       ],
       shouldReadAloud: true,
       nextState: ConversationState.FINALIZATION
@@ -449,7 +449,7 @@ export class ConversationManagerService implements ConversationManager {
 
   private handleIterationCheckpoint(session: ExtendedSessionState): ConversationResponse {
     return {
-      message: "We've gone through several iterations of your workflow description. Would you like more time to review and elaborate on your description, or shall we continue with the current information to generate your SOP?",
+      message: "We've gone through several iterations of your GTM strategy description. Would you like more time to review and elaborate on your strategy, or shall we continue with the current information to generate your GTM Strategic Plan?",
       requiresConfirmation: true,
       suggestedActions: [
         'Continue with current information',
@@ -469,11 +469,11 @@ export class ConversationManagerService implements ConversationManager {
     const summaryText = this.buildComprehensiveSummary(session, aiSummary);
     
     return {
-      message: `Let me summarize what we've discussed so far:\n\n${summaryText}\n\nWould you like to take more time to elaborate on any details, or are you ready to proceed with generating the SOP?`,
+      message: `Let me summarize what we've discussed so far:\n\n${summaryText}\n\nWould you like to take more time to elaborate on any details, or are you ready to proceed with generating the GTM Strategic Plan?`,
       requiresConfirmation: true,
       suggestedActions: [
         'Add more details',
-        'Proceed with SOP generation',
+        'Proceed with GTM Plan generation',
         'Review and refine'
       ],
       shouldReadAloud: true,
@@ -1256,7 +1256,7 @@ export class ConversationManagerService implements ConversationManager {
 
     // Set metadata
     workflow.metadata = {
-      author: 'AI Voice SOP Agent',
+      author: 'AI GTM Strategy Agent',
       version: '1.0.0',
       tags: this.generateTagsFromWorkflow(workflow),
       category: this.determineWorkflowCategory(workflow),
@@ -1560,7 +1560,7 @@ export class ConversationManagerService implements ConversationManager {
         instructions.push("Session was refining workflow. Continue with adjustments and improvements.");
         break;
       case ConversationPhase.FINALIZATION:
-        instructions.push("Session was finalizing workflow. Ready to complete SOP generation.");
+        instructions.push("Session was finalizing GTM strategy. Ready to complete GTM Strategic Plan generation.");
         break;
     }
     

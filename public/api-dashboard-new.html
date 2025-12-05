@@ -297,39 +297,42 @@
 
         /* Badges */
         .status-badge {
-            padding: 0.25rem 0.75rem;
+            padding: 0.4rem 0.85rem;
             border-radius: 12px;
-            font-size: 0.75rem;
-            font-weight: 600;
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 0.3px;
         }
         
         .status-success {
-            background: #d1fae5;
-            color: #065f46;
+            background: #10b981;
+            color: #ffffff;
         }
         
         .status-error {
-            background: #fee2e2;
-            color: #991b1b;
+            background: #ef4444;
+            color: #ffffff;
         }
         
         .status-warning {
-            background: #fef3c7;
-            color: #92400e;
+            background: #f59e0b;
+            color: #ffffff;
         }
         
         .method-badge {
-            padding: 0.25rem 0.5rem;
-            border-radius: 4px;
-            font-size: 0.75rem;
-            font-weight: 600;
+            padding: 0.4rem 0.75rem;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            font-weight: 700;
             font-family: monospace;
+            letter-spacing: 0.5px;
         }
         
-        .method-get { background: #dbeafe; color: #1e40af; }
-        .method-post { background: #d1fae5; color: #065f46; }
-        .method-put { background: #fef3c7; color: #92400e; }
-        .method-delete { background: #fee2e2; color: #991b1b; }
+        .method-get { background: #3b82f6; color: #ffffff; }
+        .method-post { background: #10b981; color: #ffffff; }
+        .method-put { background: #f59e0b; color: #ffffff; }
+        .method-delete { background: #ef4444; color: #ffffff; }
+        .method-patch { background: #8b5cf6; color: #ffffff; }
 
         /* API Tester */
         .api-tester {
@@ -510,7 +513,7 @@
         }
 
         .code-block {
-            background: #f9fafb;
+            background: #333333;
             border: 1px solid #e5e7eb;
             border-radius: 8px;
             padding: 1rem;
@@ -518,6 +521,12 @@
             font-size: 0.85rem;
             overflow-x: auto;
             position: relative;
+            color: #f3f4f6;
+        }
+        
+        .code-block pre {
+            color: #f3f4f6;
+            margin: 0;
         }
 
         .copy-button {
