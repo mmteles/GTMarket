@@ -180,13 +180,17 @@ html {
 }
 
 /* Cards */
-.card, .message, .sop-card {
-    background: linear-gradient(135deg, rgba(26, 26, 26, 0.95) 0%, rgba(61, 0, 61, 0.3) 100%);
+.card, .message, .sop-card, .gtm-card {
+    background: var(--halloween-black) !important;
     border: 3px solid var(--halloween-purple);
     border-radius: 12px;
     padding: 2rem;
     box-shadow: var(--purple-glow), 0 0 40px rgba(139, 0, 0, 0.3);
     margin-bottom: 1.5rem;
+}
+
+.card *, .sop-card *, .gtm-card * {
+    color: #ffffff !important;
 }
 
 .card h2, .sop-card h2 {
@@ -425,27 +429,30 @@ html {
     border: 3px solid;
     font-size: 1.1rem;
     font-weight: 700;
+    background: var(--halloween-black) !important;
 }
 
 .alert-critical, .alert-error { 
-    background: linear-gradient(135deg, rgba(139, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.9) 100%);
     border-color: var(--halloween-blood);
     box-shadow: var(--blood-glow);
-    color: #ff6666;
+    color: #ff6666 !important;
 }
 
 .alert-warning { 
-    background: linear-gradient(135deg, rgba(255, 107, 0, 0.3) 0%, rgba(0, 0, 0, 0.9) 100%);
     border-color: var(--halloween-orange);
     box-shadow: var(--spooky-glow);
-    color: #ffaa66;
+    color: var(--halloween-orange) !important;
+    background: var(--halloween-black) !important;
 }
 
 .alert-info { 
-    background: linear-gradient(135deg, rgba(107, 14, 107, 0.3) 0%, rgba(0, 0, 0, 0.9) 100%);
     border-color: var(--halloween-purple);
     box-shadow: var(--purple-glow);
-    color: #cc99ff;
+    color: #cc99ff !important;
+}
+
+.no-alerts {
+    color: var(--halloween-orange) !important;
 }
 
 /* Loading Spinner */
@@ -530,26 +537,29 @@ table {
     width: 100%;
     border-collapse: collapse;
     margin: 1.5rem 0;
+    background: var(--halloween-black) !important;
 }
 
 th, td {
     border: 2px solid var(--halloween-purple);
     padding: 1rem;
     text-align: left;
-    color: #ffffff;
+    color: #000000 !important;
+    background: #ffffff !important;
     font-size: 1.1rem;
     font-weight: 700;
 }
 
 th {
-    background: linear-gradient(135deg, var(--halloween-purple) 0%, var(--halloween-black) 100%);
+    background: var(--halloween-purple) !important;
+    color: #ffffff !important;
     font-family: 'Creepster', cursive;
     font-weight: 900;
     font-size: 1.2rem;
 }
 
-tr:hover {
-    background: linear-gradient(135deg, rgba(107, 14, 107, 0.2) 0%, rgba(0, 0, 0, 0.5) 100%);
+tr:hover td {
+    background: #f0f0f0 !important;
 }
 
 /* Spooky Effects */
@@ -582,10 +592,19 @@ tr:hover {
     padding: 0 1rem;
     position: relative;
     z-index: 1;
+    pointer-events: none;
 }
 
-.input-wrapper * {
+.input-wrapper .input-box {
     pointer-events: auto;
+}
+
+.input-wrapper .button-group {
+    pointer-events: auto;
+}
+
+.input-wrapper button {
+    pointer-events: auto !important;
 }
 
 /* Force black backgrounds everywhere */
@@ -634,7 +653,7 @@ p, span, div, label, a, li, td, th, h1, h2, h3, h4, h5, h6 {
 
 /* API Logs page fixes */
 .filters, .filter-group, .search-box {
-    background: linear-gradient(135deg, rgba(26, 26, 26, 0.95) 0%, rgba(61, 0, 61, 0.3) 100%) !important;
+    background: var(--halloween-black) !important;
     border: 3px solid var(--halloween-purple) !important;
     color: #ffffff !important;
 }
@@ -650,6 +669,18 @@ p, span, div, label, a, li, td, th, h1, h2, h3, h4, h5, h6 {
 .filter-group select option {
     background: var(--halloween-black) !important;
     color: #ffffff !important;
+}
+
+/* Fix button positioning in API logs */
+.card .button-group {
+    position: relative !important;
+    right: auto !important;
+    bottom: auto !important;
+    margin-top: 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: flex-start;
 }
 
 /* Tab buttons */
