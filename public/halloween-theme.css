@@ -81,7 +81,7 @@ html {
 
 .logo {
     font-family: 'Creepster', cursive;
-    font-size: 3rem;
+    font-size: 4rem;
     font-weight: 900;
     background: linear-gradient(135deg, var(--halloween-orange) 0%, var(--halloween-purple) 100%);
     -webkit-background-clip: text;
@@ -92,7 +92,7 @@ html {
     align-items: center;
     gap: 1rem;
     animation: flicker 3s infinite;
-    letter-spacing: 3px;
+    letter-spacing: 4px;
     filter: drop-shadow(0 0 10px rgba(107, 14, 107, 0.8));
 }
 
@@ -160,17 +160,6 @@ html {
     padding: 4rem 1rem;
     margin-bottom: 2rem;
     position: relative;
-}
-
-.welcome::before {
-    content: '🎃 👻 🦇 🐈‍⬛ 🧙‍♀️ 🎃';
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 2rem;
-    opacity: 0.6;
-    animation: spookyFloat 3s ease-in-out infinite;
 }
 
 .welcome h1 {
@@ -294,6 +283,17 @@ html {
     text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
 }
 
+/* Button Group */
+.button-group {
+    position: absolute;
+    right: 1.25rem;
+    bottom: 0.75rem;
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
+    z-index: 100;
+}
+
 .send-button, .mic-button {
     width: 48px;
     height: 48px;
@@ -310,6 +310,9 @@ html {
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
+    z-index: 100;
+    pointer-events: auto;
 }
 
 .btn:hover, .action-btn:hover, .send-button:hover:not(:disabled), .mic-button:hover {
@@ -346,9 +349,9 @@ html {
     min-height: 70px;
     max-height: 250px;
     padding: 1rem 13rem 1rem 1.5rem;
-    border: 3px solid var(--halloween-purple);
+    border: none;
     border-radius: 12px;
-    background: linear-gradient(135deg, rgba(26, 26, 26, 0.95) 0%, rgba(61, 0, 61, 0.3) 100%);
+    background: transparent;
     color: #ffffff;
     font-family: 'Butcherman', cursive;
     font-size: 1.2rem;
@@ -360,8 +363,6 @@ html {
 
 .input-box:focus {
     outline: none;
-    border-color: var(--halloween-orange);
-    box-shadow: var(--spooky-glow), var(--purple-glow);
 }
 
 .input-box::placeholder {
@@ -569,6 +570,13 @@ tr:hover {
     border-top: 3px solid var(--halloween-purple);
     z-index: 90;
     box-shadow: 0 -4px 30px rgba(107, 14, 107, 0.5), 0 0 50px rgba(139, 0, 0, 0.3);
+}
+
+.input-wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    position: relative;
 }
 
 /* Force black backgrounds everywhere */
