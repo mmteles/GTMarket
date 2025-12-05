@@ -1025,18 +1025,24 @@
             
             // Hide welcome section on first message
             const welcomeSection = document.getElementById('welcome-section');
-            if (welcomeSection.style.display !== 'none') {
+            const isFirstMessage = welcomeSection.style.display !== 'none';
+            if (isFirstMessage) {
                 welcomeSection.style.display = 'none';
-                
-                // Scroll to status bar when hiding welcome
-                const statusBar = document.getElementById('status-bar');
-                setTimeout(() => {
-                    statusBar.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }, 100);
             }
             
             // Add user message to UI
             addMessage('user', message);
+            
+            // Scroll to the user message after it's added (especially important for first message)
+            if (isFirstMessage) {
+                setTimeout(() => {
+                    const chatContainer = document.getElementById('chat-container');
+                    const lastMessage = chatContainer.lastElementChild;
+                    if (lastMessage) {
+                        lastMessage.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }
+                }, 100);
+            }
             
             // Show typing indicator and scroll to it
             const typingIndicator = document.getElementById('typing-indicator');
