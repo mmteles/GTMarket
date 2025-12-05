@@ -85,7 +85,7 @@ function applyHalloweenTheme(filePath) {
         '<p>Whisper your workflow into the darkness, and watch as MarketHero summons a terrifyingly comprehensive SOP...</p>'
     );
 
-    // Update emoji icons to spooky ones
+    // Update emoji icons to SCARY spooky ones
     content = content.replace(/🎙️/g, '🦇');
     content = content.replace(/📈/g, '🕷️');
     content = content.replace(/🔍/g, '👁️');
@@ -107,6 +107,16 @@ function applyHalloweenTheme(filePath) {
     content = content.replace(/💬/g, '🦇');
     content = content.replace(/🔔/g, '🔔');
     content = content.replace(/⚙️/g, '⚙️');
+    content = content.replace(/📁/g, '⚰️');
+    content = content.replace(/🗂️/g, '🧙‍♀️');
+    content = content.replace(/📌/g, '🩸');
+    content = content.replace(/🔗/g, '⛓️');
+    content = content.replace(/💡/g, '🕯️');
+    content = content.replace(/🎯/g, '🎃');
+    content = content.replace(/🚀/g, '🧹');
+    content = content.replace(/⭐/g, '✨');
+    content = content.replace(/🎨/g, '🧪');
+    content = content.replace(/🔧/g, '🗡️');
 
     // Write updated content
     fs.writeFileSync(filePath, content, 'utf8');
