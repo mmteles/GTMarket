@@ -1,22 +1,58 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+<svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
-    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
   </defs>
   
-  <!-- Background circle -->
-  <circle cx="50" cy="50" r="48" fill="url(#grad)"/>
+  <!-- Background -->
+  <rect width="100" height="100" fill="#0a0a0a"/>
   
-  <!-- Microphone icon -->
-  <g fill="white">
-    <!-- Mic body -->
-    <rect x="42" y="25" width="16" height="25" rx="8" ry="8"/>
-    <!-- Mic stand -->
-    <path d="M 50 50 L 50 65 M 40 65 L 60 65"/>
-    <!-- Sound waves -->
-    <path d="M 30 40 Q 28 45 30 50" stroke="white" stroke-width="2" fill="none" opacity="0.7"/>
-    <path d="M 70 40 Q 72 45 70 50" stroke="white" stroke-width="2" fill="none" opacity="0.7"/>
-  </g>
+  <!-- Left Wing -->
+  <path d="M 18 42 Q 8 34, 4 38 Q 2 42, 8 46 Q 13 48, 18 46 Q 15 50, 12 54 Q 10 56, 15 58 Q 20 60, 22 56 L 30 46 Z" 
+        fill="#ff6b00" 
+        stroke="#8b0000" 
+        stroke-width="1.5"
+        filter="url(#glow)"/>
+  
+  <!-- Right Wing -->
+  <path d="M 82 42 Q 92 34, 96 38 Q 98 42, 92 46 Q 87 48, 82 46 Q 85 50, 88 54 Q 90 56, 85 58 Q 80 60, 78 56 L 70 46 Z" 
+        fill="#ff6b00" 
+        stroke="#8b0000" 
+        stroke-width="1.5"
+        filter="url(#glow)"/>
+  
+  <!-- Body -->
+  <path d="M 50 25 L 70 46 L 66 70 Q 62 80, 50 83 Q 38 80, 34 70 L 30 46 Z" 
+        fill="#0a0a0a" 
+        stroke="#ff6b00" 
+        stroke-width="3"
+        filter="url(#glow)"/>
+  
+  <!-- M Letter -->
+  <text x="38" y="62" 
+        font-family="Creepster, cursive" 
+        font-size="32" 
+        font-weight="bold" 
+        fill="#ff6b00"
+        filter="url(#glow)">M</text>
+  
+  <!-- Head -->
+  <circle cx="50" cy="20" r="10" fill="#0a0a0a" stroke="#ff6b00" stroke-width="2" filter="url(#glow)"/>
+  
+  <!-- Ears -->
+  <path d="M 44 13 L 40 6 L 46 15 Z" fill="#ff6b00" stroke="#8b0000" stroke-width="1"/>
+  <path d="M 56 13 L 60 6 L 54 15 Z" fill="#ff6b00" stroke="#8b0000" stroke-width="1"/>
+  
+  <!-- Eyes -->
+  <circle cx="46" cy="19" r="2" fill="#ff0000" filter="url(#glow)"/>
+  <circle cx="54" cy="19" r="2" fill="#ff0000" filter="url(#glow)"/>
+  
+  <!-- Fangs -->
+  <path d="M 48 23 L 47 26 L 49 23 Z" fill="#ffffff"/>
+  <path d="M 52 23 L 51 26 L 53 23 Z" fill="#ffffff"/>
 </svg>

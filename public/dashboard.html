@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>System Dashboard</title>
+    <title>🦇 MarketHero - System Dashboard 🎃</title>
+    <link rel="stylesheet" href="/halloween-theme.css">
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
     <style>
         * {
@@ -267,11 +268,11 @@
     <!-- Header -->
     <div class="header">
         <div class="header-content">
-            <div class="logo">📈 System Dashboard</div>
+            <div class="logo"><img src="/markethero-icon.svg" alt="MarketHero" class="logo-icon" />MarketHero</div>
             <div class="nav-links">
-                <a href="/new" class="nav-link">🏠 Home</a>
-                <a href="/dashboard" class="nav-link active">📈 System Dashboard</a>
-                <a href="/api-dashboard-new.html" class="nav-link">🔍 API Logs</a>
+                <a href="/new" class="nav-link">🏚️ Home</a>
+                <a href="/dashboard" class="nav-link active">🕷️ System Dashboard</a>
+                <a href="/api-dashboard-new.html" class="nav-link">👁️ API Logs</a>
             </div>
         </div>
     </div>
@@ -432,7 +433,7 @@
             alertsCard.innerHTML = `<h2>Active Alerts (${data.health.alerts.length})</h2>`;
             
             if (data.health.alerts.length === 0) {
-                alertsCard.innerHTML += '<div class="no-alerts">✅ No active alerts</div>';
+                alertsCard.innerHTML += '<div class="no-alerts">💀 No active alerts</div>';
             } else {
                 data.health.alerts.forEach(alert => {
                     const alertDiv = document.createElement('div');

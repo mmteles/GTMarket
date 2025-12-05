@@ -1,0 +1,499 @@
+/* 🎃 Halloween Theme - MarketHero 🦇 */
+@import url('https://fonts.googleapis.com/css2?family=Creepster&family=Nosifer&family=Butcherman&display=swap');
+
+:root {
+    --halloween-black: #0a0a0a;
+    --halloween-orange: #ff6b00;
+    --halloween-dark-orange: #cc5500;
+    --halloween-blood: #8b0000;
+    --halloween-purple: #4a0e4e;
+    --halloween-gray: #2a2a2a;
+    --halloween-light-gray: #3a3a3a;
+    --spooky-glow: 0 0 20px rgba(255, 107, 0, 0.6);
+    --blood-glow: 0 0 15px rgba(139, 0, 0, 0.8);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Butcherman', cursive, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: var(--halloween-black);
+    color: var(--halloween-orange);
+    line-height: 1.6;
+    background-image: 
+        radial-gradient(circle at 20% 50%, rgba(255, 107, 0, 0.05) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(139, 0, 0, 0.05) 0%, transparent 50%);
+}
+
+/* Spooky scrollbar */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--halloween-black);
+    border-left: 1px solid var(--halloween-orange);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--halloween-orange);
+    border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--halloween-dark-orange);
+    box-shadow: var(--spooky-glow);
+}
+
+/* Header */
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(10, 10, 10, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 2px solid var(--halloween-orange);
+    padding: 1rem 2rem;
+    box-shadow: 0 4px 20px rgba(255, 107, 0, 0.3);
+}
+
+.header-content {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: 'Creepster', cursive;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--halloween-orange);
+    text-shadow: var(--spooky-glow);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    animation: flicker 3s infinite;
+}
+
+@keyframes flicker {
+    0%, 100% { opacity: 1; text-shadow: var(--spooky-glow); }
+    50% { opacity: 0.95; text-shadow: 0 0 10px rgba(255, 107, 0, 0.4); }
+}
+
+.logo-icon {
+    width: 48px;
+    height: 48px;
+    filter: drop-shadow(var(--spooky-glow));
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+}
+
+.nav-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.nav-link {
+    color: var(--halloween-orange);
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    border: 1px solid transparent;
+    transition: all 0.3s;
+    font-size: 0.9rem;
+    font-family: 'Butcherman', cursive;
+}
+
+.nav-link:hover {
+    background: var(--halloween-gray);
+    border-color: var(--halloween-orange);
+    box-shadow: var(--spooky-glow);
+    transform: translateY(-2px);
+}
+
+.nav-link.active {
+    background: var(--halloween-orange);
+    color: var(--halloween-black);
+    box-shadow: var(--spooky-glow);
+}
+
+/* Main Container */
+.main-container, .container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* Welcome Message */
+.welcome {
+    text-align: center;
+    padding: 3rem 1rem;
+    margin-bottom: 2rem;
+}
+
+.welcome h1 {
+    font-family: 'Nosifer', cursive;
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--halloween-orange);
+    text-shadow: var(--spooky-glow);
+    animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+.welcome p {
+    font-size: 1.2rem;
+    color: var(--halloween-orange);
+    max-width: 600px;
+    margin: 0 auto;
+    opacity: 0.9;
+}
+
+/* Cards */
+.card, .message, .sop-card {
+    background: var(--halloween-gray);
+    border: 2px solid var(--halloween-orange);
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: var(--spooky-glow);
+    margin-bottom: 1rem;
+}
+
+.card h2, .sop-card h2 {
+    font-family: 'Creepster', cursive;
+    font-size: 1.5rem;
+    color: var(--halloween-orange);
+    text-shadow: 0 0 10px rgba(255, 107, 0, 0.5);
+    margin-bottom: 1rem;
+}
+
+/* Messages */
+.message {
+    display: flex;
+    gap: 1rem;
+    animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.message.user {
+    background: var(--halloween-purple);
+    border-color: var(--halloween-blood);
+}
+
+.message.assistant {
+    background: var(--halloween-gray);
+    border-color: var(--halloween-orange);
+}
+
+.message-avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    flex-shrink: 0;
+    border: 2px solid var(--halloween-orange);
+    box-shadow: var(--spooky-glow);
+}
+
+.message-role {
+    font-family: 'Creepster', cursive;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    color: var(--halloween-orange);
+}
+
+.message-text {
+    color: #e0e0e0;
+    word-wrap: break-word;
+}
+
+/* Buttons */
+.btn, .action-btn, .send-button, .mic-button {
+    padding: 0.75rem 1.5rem;
+    border: 2px solid var(--halloween-orange);
+    border-radius: 8px;
+    background: var(--halloween-gray);
+    color: var(--halloween-orange);
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 600;
+    font-family: 'Butcherman', cursive;
+    transition: all 0.3s;
+    box-shadow: 0 0 10px rgba(255, 107, 0, 0.3);
+}
+
+.btn:hover, .action-btn:hover, .send-button:hover:not(:disabled), .mic-button:hover {
+    background: var(--halloween-orange);
+    color: var(--halloween-black);
+    box-shadow: var(--spooky-glow);
+    transform: translateY(-2px) scale(1.05);
+}
+
+.btn-primary, .action-btn.primary {
+    background: var(--halloween-orange);
+    color: var(--halloween-black);
+    box-shadow: var(--spooky-glow);
+}
+
+.btn-primary:hover, .action-btn.primary:hover {
+    background: var(--halloween-dark-orange);
+    box-shadow: 0 0 30px rgba(255, 107, 0, 0.8);
+}
+
+.btn:disabled, .action-btn:disabled, .send-button:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+/* Input */
+.input-box {
+    width: 100%;
+    min-height: 60px;
+    max-height: 200px;
+    padding: 0.75rem 12rem 0.75rem 1rem;
+    border: 2px solid var(--halloween-orange);
+    border-radius: 12px;
+    background: var(--halloween-gray);
+    color: var(--halloween-orange);
+    font-family: 'Butcherman', cursive;
+    font-size: 1rem;
+    resize: none;
+    overflow-y: auto;
+    transition: all 0.3s;
+}
+
+.input-box:focus {
+    outline: none;
+    border-color: var(--halloween-dark-orange);
+    box-shadow: var(--spooky-glow);
+}
+
+.input-box::placeholder {
+    color: rgba(255, 107, 0, 0.5);
+}
+
+/* Status Indicators */
+.status-indicator {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-right: 8px;
+    box-shadow: 0 0 10px currentColor;
+}
+
+.status-healthy, .status-connected { background-color: #00ff00; }
+.status-degraded { background-color: var(--halloween-orange); }
+.status-unhealthy, .status-error { background-color: var(--halloween-blood); }
+.status-unknown { background-color: #666; }
+
+/* Metrics */
+.metric {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid var(--halloween-orange);
+}
+
+.metric:last-child {
+    border-bottom: none;
+}
+
+.metric-label {
+    font-weight: 500;
+    color: rgba(255, 107, 0, 0.8);
+}
+
+.metric-value {
+    font-weight: 600;
+    color: var(--halloween-orange);
+    text-shadow: 0 0 5px rgba(255, 107, 0, 0.5);
+}
+
+/* Alerts */
+.alert {
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border: 2px solid;
+}
+
+.alert-critical, .alert-error { 
+    background: rgba(139, 0, 0, 0.2); 
+    border-color: var(--halloween-blood);
+    box-shadow: var(--blood-glow);
+}
+
+.alert-warning { 
+    background: rgba(255, 107, 0, 0.2); 
+    border-color: var(--halloween-orange);
+    box-shadow: var(--spooky-glow);
+}
+
+.alert-info { 
+    background: rgba(74, 14, 78, 0.2); 
+    border-color: var(--halloween-purple);
+}
+
+/* Loading Spinner */
+.spinner {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border: 4px solid var(--halloween-gray);
+    border-top-color: var(--halloween-orange);
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* Microphone Recording */
+.mic-button.recording {
+    background: var(--halloween-blood);
+    border-color: var(--halloween-blood);
+    box-shadow: var(--blood-glow);
+    animation: bloodPulse 1.5s infinite;
+}
+
+@keyframes bloodPulse {
+    0%, 100% {
+        box-shadow: 0 0 0 0 rgba(139, 0, 0, 0.7);
+    }
+    50% {
+        box-shadow: 0 0 0 15px rgba(139, 0, 0, 0);
+    }
+}
+
+/* Voice Wave */
+.voice-wave {
+    background: rgba(255, 107, 0, 0.2);
+    border: 2px solid var(--halloween-orange);
+    box-shadow: var(--spooky-glow);
+}
+
+.wave-bar {
+    background: var(--halloween-orange);
+    box-shadow: 0 0 5px var(--halloween-orange);
+}
+
+/* Grid */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+/* Component List */
+.component-list {
+    list-style: none;
+}
+
+.component-item {
+    display: flex;
+    align-items: center;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid var(--halloween-orange);
+    color: var(--halloween-orange);
+}
+
+.component-item:last-child {
+    border-bottom: none;
+}
+
+.component-name {
+    flex: 1;
+    font-weight: 500;
+}
+
+/* Tables */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+}
+
+th, td {
+    border: 1px solid var(--halloween-orange);
+    padding: 0.75rem;
+    text-align: left;
+    color: var(--halloween-orange);
+}
+
+th {
+    background: var(--halloween-gray);
+    font-family: 'Creepster', cursive;
+    font-weight: 600;
+}
+
+tr:hover {
+    background: rgba(255, 107, 0, 0.1);
+}
+
+/* Spooky Effects */
+.spooky-icon {
+    display: inline-block;
+    animation: spookyFloat 2s ease-in-out infinite;
+}
+
+@keyframes spookyFloat {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-5px) rotate(5deg); }
+}
+
+/* Input Container */
+.input-container {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(10, 10, 10, 0.95);
+    padding: 1rem;
+    border-top: 2px solid var(--halloween-orange);
+    z-index: 90;
+    box-shadow: 0 -4px 20px rgba(255, 107, 0, 0.3);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .logo {
+        font-size: 1.5rem;
+    }
+
+    .welcome h1 {
+        font-size: 2.5rem;
+    }
+}

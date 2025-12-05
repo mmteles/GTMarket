@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SOP Document</title>
+    <title>🦇 MarketHero - SOP Document 🎃</title>
+    <link rel="stylesheet" href="/halloween-theme.css">
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
     <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
     <style>
@@ -619,12 +620,12 @@
     <!-- Header -->
     <div class="header no-print">
         <div class="header-content">
-            <div class="header-title">📋 SOP Document</div>
+            <div class="header-title">📜 SOP Document</div>
             <div class="header-actions">
                 <a href="/new" class="btn btn-secondary">← Back to Chat</a>
-                <button class="btn btn-secondary" onclick="exportDocument('pdf')" id="export-pdf-btn">📄 Export PDF</button>
-                <button class="btn btn-secondary" onclick="exportDocument('docx')" id="export-docx-btn">📝 Export Word</button>
-                <button class="btn btn-secondary" onclick="exportDocument('md')" id="export-md-btn">🤖 Export Agent.MD</button>
+                <button class="btn btn-secondary" onclick="exportDocument('pdf')" id="export-pdf-btn">📜 Export PDF</button>
+                <button class="btn btn-secondary" onclick="exportDocument('docx')" id="export-docx-btn">🕸️ Export Word</button>
+                <button class="btn btn-secondary" onclick="exportDocument('md')" id="export-md-btn">🧛 Export Agent.MD</button>
                 <button class="btn btn-primary" onclick="window.print()">🖨️ Print</button>
             </div>
         </div>
@@ -903,7 +904,7 @@ ${chart.mermaidCode}
                     // Replace failed diagrams with error message
                     document.querySelectorAll('.mermaid').forEach(el => {
                         if (el.getAttribute('data-processed') !== 'true') {
-                            el.innerHTML = '<div style="padding: 2rem; background: #fef2f2; border: 1px solid #fecaca; border-radius: 8px; color: #dc2626;">⚠️ Chart rendering failed. The diagram syntax may need adjustment.</div>';
+                            el.innerHTML = '<div style="padding: 2rem; background: #fef2f2; border: 1px solid #fecaca; border-radius: 8px; color: #dc2626;">⚰️ Chart rendering failed. The diagram syntax may need adjustment.</div>';
                         }
                     });
                 });

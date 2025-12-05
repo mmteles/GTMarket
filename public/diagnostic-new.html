@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Connection Diagnostic</title>
+    <link rel="stylesheet" href="/halloween-theme.css">
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
     <style>
         * {
@@ -268,11 +269,11 @@
     <!-- Header -->
     <div class="header">
         <div class="header-content">
-            <div class="logo">🔍 Connection Diagnostic</div>
+            <div class="logo"><img src="/markethero-icon.svg" alt="MarketHero" class="logo-icon" />MarketHero</div>
             <div class="nav-links">
-                <a href="/new" class="nav-link">🏠 Home</a>
-                <a href="/dashboard" class="nav-link">📈 System Dashboard</a>
-                <a href="/api-dashboard-new.html" class="nav-link">🔍 API Logs</a>
+                <a href="/new" class="nav-link">🏚️ Home</a>
+                <a href="/dashboard" class="nav-link">🕷️ System Dashboard</a>
+                <a href="/api-dashboard-new.html" class="nav-link">👁️ API Logs</a>
             </div>
         </div>
     </div>
@@ -326,7 +327,7 @@
             
             const title = document.createElement('div');
             title.className = 'test-title';
-            const icon = pass ? '✅' : '❌';
+            const icon = pass ? '💀' : '☠️';
             title.textContent = `${icon} ${name}`;
             
             const msg = document.createElement('div');
@@ -455,7 +456,7 @@
             
             const summaryTitle = document.createElement('div');
             summaryTitle.className = 'summary-title';
-            summaryTitle.textContent = allPassed ? '✅ All Tests Passed!' : '❌ Some Tests Failed';
+            summaryTitle.textContent = allPassed ? '💀 All Tests Passed!' : '☠️ Some Tests Failed';
             summary.appendChild(summaryTitle);
             
             const summaryText = document.createElement('p');

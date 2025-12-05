@@ -1,0 +1,64 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Left Bat Wing -->
+  <path d="M 40 80 Q 20 60, 10 70 Q 5 75, 15 85 Q 25 90, 35 85 Q 30 95, 25 100 Q 20 105, 30 110 Q 40 112, 45 105 Q 42 115, 40 120 Q 38 125, 48 125 Q 55 125, 60 118 L 70 100 Z" 
+        fill="#ff6b00" 
+        stroke="#8b0000" 
+        stroke-width="2"
+        filter="url(#glow)"/>
+  
+  <!-- Right Bat Wing -->
+  <path d="M 160 80 Q 180 60, 190 70 Q 195 75, 185 85 Q 175 90, 165 85 Q 170 95, 175 100 Q 180 105, 170 110 Q 160 112, 155 105 Q 158 115, 160 120 Q 162 125, 152 125 Q 145 125, 140 118 L 130 100 Z" 
+        fill="#ff6b00" 
+        stroke="#8b0000" 
+        stroke-width="2"
+        filter="url(#glow)"/>
+  
+  <!-- Bat Body (Shield Shape) -->
+  <path d="M 100 60 L 130 100 L 125 140 Q 120 160, 100 165 Q 80 160, 75 140 L 70 100 Z" 
+        fill="#0a0a0a" 
+        stroke="#ff6b00" 
+        stroke-width="3"
+        filter="url(#glow)"/>
+  
+  <!-- Letter M -->
+  <text x="85" y="125" 
+        font-family="Creepster, cursive" 
+        font-size="45" 
+        font-weight="bold" 
+        fill="#ff6b00"
+        filter="url(#glow)">M</text>
+  
+  <!-- Bat Head -->
+  <circle cx="100" cy="50" r="15" fill="#0a0a0a" stroke="#ff6b00" stroke-width="2" filter="url(#glow)"/>
+  
+  <!-- Bat Ears -->
+  <path d="M 90 40 L 85 30 L 95 42 Z" fill="#ff6b00" stroke="#8b0000" stroke-width="1"/>
+  <path d="M 110 40 L 115 30 L 105 42 Z" fill="#ff6b00" stroke="#8b0000" stroke-width="1"/>
+  
+  <!-- Bat Eyes (Glowing) -->
+  <circle cx="95" cy="48" r="3" fill="#ff0000" filter="url(#glow)"/>
+  <circle cx="105" cy="48" r="3" fill="#ff0000" filter="url(#glow)"/>
+  
+  <!-- Fangs -->
+  <path d="M 98 55 L 97 60 L 99 55 Z" fill="#ffffff"/>
+  <path d="M 102 55 L 101 60 L 103 55 Z" fill="#ffffff"/>
+  
+  <!-- MarketHero Text Below -->
+  <text x="100" y="185" 
+        font-family="Creepster, cursive" 
+        font-size="24" 
+        font-weight="bold" 
+        fill="#ff6b00"
+        text-anchor="middle"
+        filter="url(#glow)">MarketHero</text>
+</svg>

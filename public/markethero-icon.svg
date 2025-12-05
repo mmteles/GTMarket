@@ -1,0 +1,55 @@
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Left Wing -->
+  <path d="M 8 20 Q 4 16, 2 18 Q 1 20, 4 22 Q 6 23, 8 22 Q 7 24, 6 26 Q 5 27, 7 28 Q 9 29, 10 27 L 14 22 Z" 
+        fill="#ff6b00" 
+        stroke="#8b0000" 
+        stroke-width="1"
+        filter="url(#glow)"/>
+  
+  <!-- Right Wing -->
+  <path d="M 40 20 Q 44 16, 46 18 Q 47 20, 44 22 Q 42 23, 40 22 Q 41 24, 42 26 Q 43 27, 41 28 Q 39 29, 38 27 L 34 22 Z" 
+        fill="#ff6b00" 
+        stroke="#8b0000" 
+        stroke-width="1"
+        filter="url(#glow)"/>
+  
+  <!-- Body -->
+  <path d="M 24 12 L 34 22 L 32 32 Q 30 36, 24 37 Q 18 36, 16 32 L 14 22 Z" 
+        fill="#0a0a0a" 
+        stroke="#ff6b00" 
+        stroke-width="2"
+        filter="url(#glow)"/>
+  
+  <!-- M Letter -->
+  <text x="18" y="30" 
+        font-family="Creepster, cursive" 
+        font-size="16" 
+        font-weight="bold" 
+        fill="#ff6b00"
+        filter="url(#glow)">M</text>
+  
+  <!-- Head -->
+  <circle cx="24" cy="10" r="6" fill="#0a0a0a" stroke="#ff6b00" stroke-width="1.5" filter="url(#glow)"/>
+  
+  <!-- Ears -->
+  <path d="M 20 6 L 18 2 L 21 7 Z" fill="#ff6b00" stroke="#8b0000" stroke-width="0.5"/>
+  <path d="M 28 6 L 30 2 L 27 7 Z" fill="#ff6b00" stroke="#8b0000" stroke-width="0.5"/>
+  
+  <!-- Eyes -->
+  <circle cx="22" cy="9" r="1.5" fill="#ff0000" filter="url(#glow)"/>
+  <circle cx="26" cy="9" r="1.5" fill="#ff0000" filter="url(#glow)"/>
+  
+  <!-- Fangs -->
+  <path d="M 23 12 L 22.5 14 L 23.5 12 Z" fill="#ffffff"/>
+  <path d="M 25 12 L 24.5 14 L 25.5 12 Z" fill="#ffffff"/>
+</svg>

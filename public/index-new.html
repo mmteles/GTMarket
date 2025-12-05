@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Voice SOP Agent</title>
+    <title>🦇 MarketHero - Spooky SOP Generator 🎃</title>
+    <link rel="stylesheet" href="/halloween-theme.css">
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
     <style>
         * {
@@ -735,11 +736,11 @@
     <!-- Header -->
     <div class="header">
         <div class="header-content">
-            <div class="logo">🎙️ AI Voice SOP Agent</div>
+            <div class="logo"><img src="/markethero-icon.svg" alt="MarketHero" class="logo-icon" />MarketHero</div>
             <div class="nav-links">
-                <a href="/new" class="nav-link" target="_blank" rel="noopener noreferrer">🏠 Home</a>
-                <a href="/dashboard" class="nav-link" target="_blank" rel="noopener noreferrer">📈 System Dashboard</a>
-                <a href="/api-dashboard-new.html" class="nav-link" target="_blank" rel="noopener noreferrer">🔍 API Logs</a>
+                <a href="/new" class="nav-link" target="_blank" rel="noopener noreferrer">🏚️ Home</a>
+                <a href="/dashboard" class="nav-link" target="_blank" rel="noopener noreferrer">🕷️ System Dashboard</a>
+                <a href="/api-dashboard-new.html" class="nav-link" target="_blank" rel="noopener noreferrer">👁️ API Logs</a>
             </div>
         </div>
     </div>
@@ -748,8 +749,8 @@
     <div class="main-container">
         <!-- Welcome Message (shown when no conversation) -->
         <div class="welcome" id="welcome-section">
-            <h1>Create SOPs with AI</h1>
-            <p>Describe your workflow or process, and I'll help you create a comprehensive Standard Operating Procedure.</p>
+            <h1>🎃 Conjure SOPs with Dark AI Magic 🦇</h1>
+            <p>Whisper your workflow into the darkness, and watch as MarketHero summons a terrifyingly comprehensive SOP...</p>
         </div>
 
         <!-- Status Bar -->
@@ -777,25 +778,25 @@
         <!-- Action Buttons -->
         <div class="action-buttons" id="action-buttons" style="display: none;">
             <button class="action-btn primary" onclick="generateSOP()" id="generate-btn" disabled>
-                📋 Generate SOP
+                📜 Generate SOP
             </button>
         </div>
 
         <!-- SOP Section -->
         <div class="sop-section" id="sop-section">
             <div class="sop-card">
-                <h2>📄 Generated SOP</h2>
+                <h2>📜 Generated SOP</h2>
                 <div class="sop-content" id="sop-content"></div>
             </div>
             <div class="action-buttons">
                 <button class="action-btn" onclick="exportSOP('pdf')" id="export-pdf-btn">
-                    📄 Export PDF
+                    📜 Export PDF
                 </button>
                 <button class="action-btn" onclick="exportSOP('docx')" id="export-docx-btn">
-                    📝 Export Word
+                    🕸️ Export Word
                 </button>
                 <button class="action-btn" onclick="exportSOP('md')" id="export-md-btn">
-                    🤖 Export Agent.MD
+                    🧛 Export Agent.MD
                 </button>
             </div>
         </div>
@@ -1101,7 +1102,7 @@
             
             const avatar = document.createElement('div');
             avatar.className = 'message-avatar';
-            avatar.textContent = role === 'user' ? '👤' : '🤖';
+            avatar.textContent = role === 'user' ? '👻' : '🧛';
             
             const contentDiv = document.createElement('div');
             contentDiv.className = 'message-content';
@@ -1230,13 +1231,13 @@
                 
                 // Summary block
                 if (summary.description) {
-                    const summaryBlock = createResponseBlock('📋 Summary', summary.description);
+                    const summaryBlock = createResponseBlock('📜 Summary', summary.description);
                     container.appendChild(summaryBlock);
                 }
                 
                 // Key Steps
                 if (summary.keySteps && summary.keySteps.length > 0) {
-                    const stepsBlock = createResponseBlock('📝 Key Steps Identified', null);
+                    const stepsBlock = createResponseBlock('🕸️ Key Steps Identified', null);
                     const stepsList = document.createElement('ul');
                     summary.keySteps.forEach(step => {
                         const li = document.createElement('li');
@@ -1249,7 +1250,7 @@
                 
                 // Inputs
                 if (summary.identifiedInputs && summary.identifiedInputs.length > 0) {
-                    const inputsBlock = createResponseBlock('📥 Required Inputs', null);
+                    const inputsBlock = createResponseBlock('🕯️ Required Inputs', null);
                     const inputsList = document.createElement('ul');
                     summary.identifiedInputs.forEach(input => {
                         const li = document.createElement('li');
@@ -1262,7 +1263,7 @@
                 
                 // Outputs
                 if (summary.identifiedOutputs && summary.identifiedOutputs.length > 0) {
-                    const outputsBlock = createResponseBlock('📤 Expected Outputs', null);
+                    const outputsBlock = createResponseBlock('🦴 Expected Outputs', null);
                     const outputsList = document.createElement('ul');
                     summary.identifiedOutputs.forEach(output => {
                         const li = document.createElement('li');
@@ -1275,7 +1276,7 @@
                 
                 // Missing Information
                 if (summary.missingInformation && summary.missingInformation.length > 0) {
-                    const missingBlock = createResponseBlock('⚠️ Missing Information', null);
+                    const missingBlock = createResponseBlock('⚰️ Missing Information', null);
                     const missingList = document.createElement('ul');
                     summary.missingInformation.forEach(item => {
                         const li = document.createElement('li');
@@ -1288,7 +1289,7 @@
                 
                 // Completeness Score
                 if (summary.completenessScore !== undefined) {
-                    const completenessBlock = createResponseBlock('📊 Workflow Completeness', null);
+                    const completenessBlock = createResponseBlock('🔮 Workflow Completeness', null);
                     
                     const barContainer = document.createElement('div');
                     barContainer.className = 'completeness-bar';
@@ -1310,7 +1311,7 @@
                 
                 // Next Questions
                 if (summary.suggestedNextQuestions && summary.suggestedNextQuestions.length > 0) {
-                    const questionsBlock = createResponseBlock('❓ Next Questions', null);
+                    const questionsBlock = createResponseBlock('🕷️ Next Questions', null);
                     questionsBlock.classList.add('ai-question');
                     const questionsList = document.createElement('ul');
                     summary.suggestedNextQuestions.forEach(question => {
@@ -1371,7 +1372,7 @@
                 console.error('SOP generation error:', error);
                 showError('Failed to generate SOP. Please try again.');
                 generateBtn.disabled = false;
-                generateBtn.textContent = '📋 Generate SOP';
+                generateBtn.textContent = '📜 Generate SOP';
             }
         }
 
@@ -1444,7 +1445,7 @@
                     
                     // Show success message
                     const formatName = format === 'md' ? 'Agent.MD' : format.toUpperCase();
-                    addSystemMessage(`✅ SOP exported successfully as ${formatName}`);
+                    addSystemMessage(`💀 SOP exported successfully as ${formatName}`);
                 } else {
                     const errorData = await response.json();
                     throw new Error(errorData.error?.message || 'Export failed');
