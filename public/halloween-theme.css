@@ -284,41 +284,33 @@ html {
     display: flex;
     gap: 0.75rem;
     align-items: center;
-    z-index: 1000 !important;
-    pointer-events: none;
-}
-
-.button-group > * {
-    pointer-events: auto !important;
 }
 
 .send-button, .mic-button {
-    width: 48px !important;
-    height: 48px !important;
-    padding: 0 !important;
-    border: 3px solid var(--halloween-purple) !important;
-    border-radius: 10px !important;
-    background: linear-gradient(135deg, var(--halloween-purple) 0%, var(--halloween-black) 100%) !important;
-    color: #ffffff !important;
-    cursor: pointer !important;
-    font-size: 1.3rem !important;
-    font-weight: 900 !important;
-    transition: all 0.3s !important;
-    box-shadow: var(--purple-glow) !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    position: relative !important;
-    z-index: 10000 !important;
-    pointer-events: auto !important;
+    width: 48px;
+    height: 48px;
+    padding: 0;
+    border: 3px solid var(--halloween-purple);
+    border-radius: 10px;
+    background: linear-gradient(135deg, var(--halloween-purple) 0%, var(--halloween-black) 100%);
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 1.3rem;
+    font-weight: 900;
+    transition: all 0.3s;
+    box-shadow: var(--purple-glow);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
 }
 
 .send-button:hover, .mic-button:hover {
-    background: linear-gradient(135deg, var(--halloween-orange) 0%, var(--halloween-blood) 100%) !important;
+    background: linear-gradient(135deg, var(--halloween-orange) 0%, var(--halloween-blood) 100%);
 }
 
 .mic-button svg, .send-button svg, .mic-button span, .send-button span {
-    pointer-events: none !important;
+    pointer-events: none;
 }
 
 .btn:hover, .action-btn:hover, .send-button:hover:not(:disabled), .mic-button:hover {
@@ -517,10 +509,14 @@ html {
     display: flex;
     align-items: center;
     padding: 1rem 0;
-    border-bottom: 2px solid var(--halloween-purple);
-    color: #ffffff;
+    border-bottom: none;
+    color: #000000 !important;
+    background: #ffffff !important;
     font-size: 1.1rem;
     font-weight: 700;
+    margin-bottom: 0.5rem;
+    padding: 0.75rem;
+    border-radius: 8px;
 }
 
 .component-item:last-child {
@@ -530,6 +526,11 @@ html {
 .component-name {
     flex: 1;
     font-weight: 700;
+    color: #000000 !important;
+}
+
+.component-item span {
+    color: #000000 !important;
 }
 
 /* Tables */
@@ -591,20 +592,6 @@ tr:hover td {
     margin: 0 auto;
     padding: 0 1rem;
     position: relative;
-    z-index: 1;
-    pointer-events: none;
-}
-
-.input-wrapper .input-box {
-    pointer-events: auto;
-}
-
-.input-wrapper .button-group {
-    pointer-events: auto;
-}
-
-.input-wrapper button {
-    pointer-events: auto !important;
 }
 
 /* Force black backgrounds everywhere */
@@ -652,23 +639,34 @@ p, span, div, label, a, li, td, th, h1, h2, h3, h4, h5, h6 {
 }
 
 /* API Logs page fixes */
-.filters, .filter-group, .search-box {
+.filters {
     background: var(--halloween-black) !important;
-    border: 3px solid var(--halloween-purple) !important;
+    border: none !important;
     color: #ffffff !important;
 }
 
-.filter-group label, .filter-group select, .search-box input {
+.filter-group {
+    background: transparent !important;
+    border: none !important;
+}
+
+.filter-group label {
     color: #ffffff !important;
     font-size: 1.1rem !important;
     font-weight: 700 !important;
-    background: rgba(0, 0, 0, 0.8) !important;
+}
+
+.filter-group select, .filter-group input, .search-box input {
+    color: #000000 !important;
+    background: #ffffff !important;
+    font-size: 1.1rem !important;
+    font-weight: 700 !important;
     border: 2px solid var(--halloween-purple) !important;
 }
 
 .filter-group select option {
-    background: var(--halloween-black) !important;
-    color: #ffffff !important;
+    background: #ffffff !important;
+    color: #000000 !important;
 }
 
 /* Fix button positioning in API logs */
