@@ -103,6 +103,10 @@ function applyHalloweenTheme(filePath) {
     content = content.replace(/📤/g, '🦴');
     content = content.replace(/❓/g, '🕷️');
     content = content.replace(/⏳/g, '⏳');
+    content = content.replace(/ℹ️/g, '🎃');
+    content = content.replace(/💬/g, '🦇');
+    content = content.replace(/🔔/g, '🔔');
+    content = content.replace(/⚙️/g, '⚙️');
 
     // Write updated content
     fs.writeFileSync(filePath, content, 'utf8');
