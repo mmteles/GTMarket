@@ -24,15 +24,19 @@
 
 body {
     font-family: 'Butcherman', cursive, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    background: var(--halloween-black);
-    color: #ffffff;
+    background: var(--halloween-black) !important;
+    color: #ffffff !important;
     line-height: 1.8;
     font-size: 1.1rem;
     font-weight: 600;
     background-image: 
         radial-gradient(circle at 20% 50%, rgba(107, 14, 107, 0.15) 0%, transparent 50%),
         radial-gradient(circle at 80% 80%, rgba(139, 0, 0, 0.12) 0%, transparent 50%),
-        radial-gradient(circle at 50% 20%, rgba(255, 107, 0, 0.1) 0%, transparent 40%);
+        radial-gradient(circle at 50% 20%, rgba(255, 107, 0, 0.1) 0%, transparent 40%) !important;
+}
+
+html {
+    background: var(--halloween-black) !important;
 }
 
 /* Spooky scrollbar */
@@ -92,17 +96,17 @@ body {
     filter: drop-shadow(0 0 10px rgba(107, 14, 107, 0.8));
 }
 
+/* Hide logo icon, show only text */
+.logo-icon {
+    display: none !important;
+}
+
 @keyframes flicker {
     0%, 100% { opacity: 1; filter: drop-shadow(0 0 10px rgba(107, 14, 107, 0.8)); }
     50% { opacity: 0.9; filter: drop-shadow(0 0 5px rgba(255, 107, 0, 0.5)); }
 }
 
-.logo-icon {
-    width: 64px;
-    height: 64px;
-    filter: drop-shadow(0 0 15px rgba(255, 107, 0, 0.8)) drop-shadow(0 0 25px rgba(107, 14, 107, 0.6));
-    animation: float 3s ease-in-out infinite;
-}
+
 
 @keyframes float {
     0%, 100% { transform: translateY(0px) rotate(-2deg); }
@@ -115,16 +119,17 @@ body {
 }
 
 .nav-link {
-    color: #ffffff;
+    color: #ffffff !important;
     text-decoration: none;
     padding: 0.75rem 1.25rem;
     border-radius: 8px;
     border: 2px solid var(--halloween-purple);
     background: linear-gradient(135deg, rgba(107, 14, 107, 0.3) 0%, rgba(0, 0, 0, 0.8) 100%);
     transition: all 0.3s;
-    font-size: 1.1rem;
-    font-weight: 700;
-    font-family: 'Butcherman', cursive;
+    font-size: 1.2rem;
+    font-weight: 900;
+    font-family: 'Arial Black', 'Impact', sans-serif;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
 }
 
 .nav-link:hover {
@@ -564,6 +569,127 @@ tr:hover {
     border-top: 3px solid var(--halloween-purple);
     z-index: 90;
     box-shadow: 0 -4px 30px rgba(107, 14, 107, 0.5), 0 0 50px rgba(139, 0, 0, 0.3);
+}
+
+/* Force black backgrounds everywhere */
+.container, .main-container, .page, .content, .wrapper, 
+.dashboard, .logs, .sop-view, section, article, main {
+    background: var(--halloween-black) !important;
+    color: #ffffff !important;
+}
+
+/* Ensure all text is readable */
+p, span, div, label, a, li, td, th, h1, h2, h3, h4, h5, h6 {
+    color: inherit;
+}
+
+/* Fix any white backgrounds */
+.bg-white, .background-white {
+    background: var(--halloween-black) !important;
+}
+
+/* Dashboard specific fixes */
+.controls, .auto-refresh, .auto-refresh label {
+    color: #ffffff !important;
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.controls .btn, .controls button {
+    background: linear-gradient(135deg, var(--halloween-purple) 0%, var(--halloween-black) 100%) !important;
+    color: #ffffff !important;
+    border: 3px solid var(--halloween-purple) !important;
+    font-size: 1.2rem !important;
+    font-weight: 900 !important;
+    padding: 1rem 2rem !important;
+}
+
+.controls .btn:hover, .controls button:hover {
+    background: linear-gradient(135deg, var(--halloween-orange) 0%, var(--halloween-blood) 100%) !important;
+    border-color: var(--halloween-orange) !important;
+    color: #000000 !important;
+}
+
+/* API Logs page fixes */
+.filters, .filter-group, .search-box {
+    background: linear-gradient(135deg, rgba(26, 26, 26, 0.95) 0%, rgba(61, 0, 61, 0.3) 100%) !important;
+    border: 3px solid var(--halloween-purple) !important;
+    color: #ffffff !important;
+}
+
+.filter-group label, .filter-group select, .search-box input {
+    color: #ffffff !important;
+    font-size: 1.1rem !important;
+    font-weight: 700 !important;
+    background: rgba(0, 0, 0, 0.8) !important;
+    border: 2px solid var(--halloween-purple) !important;
+}
+
+.filter-group select option {
+    background: var(--halloween-black) !important;
+    color: #ffffff !important;
+}
+
+/* Tab buttons */
+.tabs, .tab-list, .tab-button, .tab {
+    background: linear-gradient(135deg, rgba(107, 14, 107, 0.3) 0%, rgba(0, 0, 0, 0.8) 100%) !important;
+    color: #ffffff !important;
+    border: 2px solid var(--halloween-purple) !important;
+    font-size: 1.1rem !important;
+    font-weight: 900 !important;
+}
+
+.tab-button.active, .tab.active {
+    background: linear-gradient(135deg, var(--halloween-orange) 0%, var(--halloween-blood) 100%) !important;
+    color: #000000 !important;
+}
+
+/* SOP page fixes */
+.header-actions, .export-buttons, .action-buttons {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.header-actions .btn, .export-buttons .btn, .action-buttons .btn,
+.header-actions button, .export-buttons button, .action-buttons button {
+    background: linear-gradient(135deg, var(--halloween-purple) 0%, var(--halloween-black) 100%) !important;
+    color: #ffffff !important;
+    border: 3px solid var(--halloween-purple) !important;
+    font-size: 1.2rem !important;
+    font-weight: 900 !important;
+    padding: 1rem 2rem !important;
+    border-radius: 10px !important;
+    box-shadow: var(--purple-glow) !important;
+}
+
+.header-actions .btn:hover, .export-buttons .btn:hover, .action-buttons .btn:hover,
+.header-actions button:hover, .export-buttons button:hover, .action-buttons button:hover {
+    background: linear-gradient(135deg, var(--halloween-orange) 0%, var(--halloween-blood) 100%) !important;
+    border-color: var(--halloween-orange) !important;
+    color: #000000 !important;
+    box-shadow: var(--spooky-glow) !important;
+    transform: translateY(-3px) scale(1.05) !important;
+}
+
+.btn-secondary {
+    background: linear-gradient(135deg, rgba(107, 14, 107, 0.5) 0%, rgba(0, 0, 0, 0.9) 100%) !important;
+    color: #ffffff !important;
+}
+
+.btn-secondary:hover {
+    background: linear-gradient(135deg, var(--halloween-purple) 0%, var(--halloween-black) 100%) !important;
+}
+
+/* No print sections */
+.no-print {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.98) 0%, rgba(61, 0, 61, 0.95) 100%) !important;
+}
+
+/* Loading states */
+.loading {
+    background: var(--halloween-black) !important;
+    color: #ffffff !important;
 }
 
 /* Responsive */
