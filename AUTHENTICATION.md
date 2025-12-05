@@ -2,7 +2,7 @@
 
 ## Overview
 
-The AI Voice SOP Agent now implements a secure JWT-based authentication system, replacing the previous hardcoded mock token approach.
+The AI Voice GTM Strategy Agent now implements a secure JWT-based authentication system, replacing the previous hardcoded mock token approach.
 
 ## Security Improvements
 

@@ -76,7 +76,7 @@ All pages have been transformed:
 - ✅ api-dashboard-new.html (API logs)
 - ✅ diagnostic.html
 - ✅ diagnostic-new.html
-- ✅ sop-view.html (SOP document viewer)
+- ✅ gtm-view.html (GTM Strategy document viewer)
 - ✅ test.html
 - ✅ test-new.html
 - ✅ test-speech.html
@@ -107,7 +107,7 @@ To remove the Halloween theme:
 
 ## MarketHero Branding
 
-**MarketHero** is positioned as a "Hero in documenting Go To Market strategies" - a powerful AI assistant that heroically conquers the challenge of creating comprehensive SOPs and documentation.
+**MarketHero** is positioned as a "Hero in creating Go-To-Market strategies" - a powerful AI assistant that heroically conquers the challenge of creating comprehensive GTM Strategies and documentation.
 
 The bat-winged logo symbolizes:
 - **Wings**: Speed and agility in documentation
@@ -161,4 +161,4 @@ Potential additions:
 
 ---
 
-**Happy Halloween! 🎃 May your SOPs be spooky and your documentation be terrifyingly thorough! 🦇**
+**Happy Halloween! 🎃 May your GTM Strategies be spooky and your strategies be terrifyingly effective! 🦇**

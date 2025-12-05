@@ -89,7 +89,7 @@ All HTML files updated with:
 5. **public/api-dashboard-new.html** - API logs (new)
 6. **public/diagnostic.html** - Diagnostics (old)
 7. **public/diagnostic-new.html** - Diagnostics (new)
-8. **public/sop-view.html** - SOP document viewer
+8. **public/gtm-view.html** - GTM Strategy document viewer
 9. **public/test.html** - API test page
 10. **public/test-new.html** - API test (new)
 11. **public/test-speech.html** - Speech test page
@@ -107,7 +107,7 @@ All HTML files updated with:
 | 📈 | 🕷️ | Analytics, charts |
 | 🔍 | 👁️ | Search functionality |
 | 🏠 | 🏚️ | Home navigation |
-| 📋 | 📜 | Documents, SOPs |
+| 📋 | 📜 | Documents, GTM Strategies |
 | 📄 | 📜 | Files, exports |
 | 📝 | 🕸️ | Writing, editing |
 | 👤 | 👻 | User avatar |
@@ -272,7 +272,7 @@ All HTML files updated with:
 - [x] Buttons have glow effects
 - [x] Input fields glow on focus
 - [x] Status indicators glow
-- [x] Build process succeeds
+- [x] Build market approach succeeds
 - [x] Server starts successfully
 - [x] No console errors
 - [x] Fast page load times
@@ -340,7 +340,7 @@ All HTML files updated with:
 - "A Hero in Documenting Go-To-Market Strategies"
 - "Conquering Documentation with Dark AI Magic"
 - "Your Heroic AI Documentation Assistant"
-- "Summoning SOPs from the Darkness"
+- "Summoning GTM Strategies from the Darkness"
 
 ## 📝 Lessons Learned
 
@@ -386,6 +386,6 @@ The transformation from GTMarket to MarketHero is complete! The application now 
 
 **Made with 🧛 by the MarketHero team**
 
-*May your SOPs be spooky and your documentation be terrifyingly thorough!*
+*May your GTM Strategies be spooky and your strategies be terrifyingly effective!*
 
 </div>

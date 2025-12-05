@@ -15,11 +15,11 @@ Visit the live application to see the Halloween theme in action!
 ║  🦇 MarketHero          🏚️ Home  🕷️ Dashboard  👁️ API Logs ║
 ╠══════════════════════════════════════════════════════════════╣
 ║                                                              ║
-║              🎃 Conjure SOPs with Dark AI Magic 🦇          ║
+║              🎃 Conjure GTM Strategies with Dark AI Magic 🦇          ║
 ║                                                              ║
-║         Whisper your workflow into the darkness,            ║
+║         Whisper your market strategy into the darkness,            ║
 ║         and watch as MarketHero summons a                   ║
-║         terrifyingly comprehensive SOP...                   ║
+║         terrifyingly comprehensive GTM Strategy...                   ║
 ║                                                              ║
 ║  ┌────────────────────────────────────────────────────┐    ║
 ║  │ 👻 You                                             │    ║
@@ -31,7 +31,7 @@ Visit the live application to see the Halloween theme in action!
 ║  │                                                     │    ║
 ║  │ 📜 Summary                                         │    ║
 ║  │ I shall help you document your customer           │    ║
-║  │ onboarding process...                              │    ║
+║  │ onboarding market approach...                              │    ║
 ║  │                                                     │    ║
 ║  │ 🕸️ Key Steps Identified                           │    ║
 ║  │ • Initial contact                                  │    ║
@@ -42,7 +42,7 @@ Visit the live application to see the Halloween theme in action!
 ║  │ ████████░░ 75% complete                           │    ║
 ║  └────────────────────────────────────────────────────┘    ║
 ║                                                              ║
-║  [ 📜 Generate SOP ]                                        ║
+║  [ 📜 Generate GTM Strategy ]                                        ║
 ║                                                              ║
 ╠══════════════════════════════════════════════════════════════╣
 ║  Type your message or speak... 🦇          [ ➤ ]           ║
@@ -81,7 +81,7 @@ Visit the live application to see the Halloween theme in action!
 ║  │ 🦴 Service Health   │  │ 📊 Statistics       │          ║
 ║  │                     │  │                     │          ║
 ║  │ ConversationMgr ●   │  │ Total Services: 5   │          ║
-║  │ SOPGenerator    ●   │  │ Healthy: 5          │          ║
+║  │ GTM StrategyGenerator    ●   │  │ Healthy: 5          │          ║
 ║  │ SpeechToText    ●   │  │ Degraded: 0         │          ║
 ║  │ TextToSpeech    ●   │  │ Unhealthy: 0        │          ║
 ║  │ DocumentExport  ●   │  │                     │          ║
@@ -121,7 +121,7 @@ Visit the live application to see the Halloween theme in action!
 ║  │ POST   │ /api/sessions   │ 💀 200 │ 45ms     │ 14:32 │  ║
 ║  │ POST   │ /api/input      │ 💀 200 │ 234ms    │ 14:33 │  ║
 ║  │ GET    │ /api/logs       │ 💀 200 │ 12ms     │ 14:34 │  ║
-║  │ POST   │ /api/sop/export │ 💀 200 │ 567ms    │ 14:35 │  ║
+║  │ POST   │ /api/gtm/export │ 💀 200 │ 567ms    │ 14:35 │  ║
 ║  │ GET    │ /api/dashboard  │ ☠️ 500 │ 89ms     │ 14:36 │  ║
 ║  └──────────────────────────────────────────────────────┘  ║
 ║                                                              ║
@@ -139,20 +139,20 @@ Visit the live application to see the Halloween theme in action!
 
 ---
 
-### 4. SOP Document Viewer (`/sop-view.html`)
+### 4. GTM Strategy Document Viewer (`/gtm-view.html`)
 
 ```
 ╔══════════════════════════════════════════════════════════════╗
-║  📜 SOP Document                              [ ← Back ]     ║
+║  📜 GTM Strategy Document                              [ ← Back ]     ║
 ╠══════════════════════════════════════════════════════════════╣
 ║                                                              ║
 ║                    🦇 MarketHero 🦇                         ║
 ║                                                              ║
 ║              Customer Onboarding Process                     ║
 ║                                                              ║
-║            Standard Operating Procedure                      ║
+║            Go-To-Market Strategy                      ║
 ║                                                              ║
-║              Document Number: SOP-2024-001                   ║
+║              Document Number: GTM Strategy-2024-001                   ║
 ║              Version: 1.0                                    ║
 ║              Date: December 5, 2024                          ║
 ║                                                              ║
@@ -181,7 +181,7 @@ Visit the live application to see the Halloween theme in action!
 - Dark document layout
 - Orange section headers
 - Spooky export buttons
-- Professional SOP format
+- Professional GTM Strategy format
 
 ---
 
@@ -254,21 +254,21 @@ Visit the live application to see the Halloween theme in action!
 ### Normal State
 ```
 ┌──────────────────┐
-│ 📜 Generate SOP  │  ← Orange border, black background
+│ 📜 Generate GTM Strategy  │  ← Orange border, black background
 └──────────────────┘
 ```
 
 ### Hover State
 ```
 ┌══════════════════┐
-│ 📜 Generate SOP  │  ← Orange background, glowing shadow
+│ 📜 Generate GTM Strategy  │  ← Orange background, glowing shadow
 └══════════════════┘    ↑ Scales up 1.05x, lifts up 2px
 ```
 
 ### Disabled State
 ```
 ┌──────────────────┐
-│ 📜 Generate SOP  │  ← Faded, no glow, no interaction
+│ 📜 Generate GTM Strategy  │  ← Faded, no glow, no interaction
 └──────────────────┘    ↑ 30% opacity
 ```
 
@@ -295,7 +295,7 @@ Visit the live application to see the Halloween theme in action!
 ### With Text
 ```
 ┌═════════════════════════════════════════┐
-│ I need help documenting my workflow...█ │
+│ I need help documenting my market strategy...█ │
 └═════════════════════════════════════════┘
   ↑ Orange text, glowing border
 ```
@@ -375,7 +375,7 @@ Glow 3: 🦇 (0px shadow)
 ### Nosifer Font (Titles)
 ```
 ╔═══════════════════════════════════╗
-║  Conjure SOPs with Dark AI Magic  ║
+║  Conjure GTM Strategies with Dark AI Magic  ║
 ╚═══════════════════════════════════╝
 ```
 **Style**: Distressed scary font
@@ -383,10 +383,10 @@ Glow 3: 🦇 (0px shadow)
 ### Butcherman Font (Body)
 ```
 ╔═══════════════════════════════════╗
-║  Whisper your workflow into the   ║
+║  Whisper your market strategy into the   ║
 ║  darkness, and watch as           ║
 ║  MarketHero summons a             ║
-║  terrifyingly comprehensive SOP   ║
+║  terrifyingly comprehensive GTM Strategy   ║
 ╚═══════════════════════════════════╝
 ```
 **Style**: Readable but spooky
@@ -541,7 +541,7 @@ Glow 3: 🦇 (0px shadow)
 ┌──────────────────────────────────────┐
 │ ☠️ Error                             │
 ├──────────────────────────────────────┤
-│ Failed to generate SOP.              │
+│ Failed to generate GTM Strategy.              │
 │ Please try again.                    │
 │                                      │
 │ [ Try Again ]                        │
@@ -558,9 +558,9 @@ Glow 3: 🦇 (0px shadow)
 ┌──────────────────────────────────────┐
 │ 💀 Success                           │
 ├──────────────────────────────────────┤
-│ SOP generated successfully!          │
+│ GTM Strategy generated successfully!          │
 │                                      │
-│ [ View SOP ]                         │
+│ [ View GTM Strategy ]                         │
 └──────────────────────────────────────┘
 ```
 
@@ -576,14 +576,14 @@ Visit **http://localhost:3000** to see all these elements in action!
 1. **Main Page**: See the bat logo and spooky chat interface
 2. **Dashboard**: Monitor system with glowing indicators
 3. **API Logs**: View haunted request logs
-4. **Generate SOP**: Create a document and see the ancient scroll design
+4. **Generate GTM Strategy**: Create a document and see the ancient scroll design
 
 ### Try These Interactions:
 - 🦇 **Hover over buttons** - Watch them glow orange
 - 👁️ **Click voice input** - See the blood-red recording pulse
 - 🕷️ **Type a message** - Watch the input field glow
-- 📜 **Generate an SOP** - Experience the full workflow
+- 📜 **Generate an GTM Strategy** - Experience the full market strategy
 
 ---
 
-**🎃 Happy Halloween! May your documentation be terrifyingly thorough! 🦇**
+**🎃 Happy Halloween! May your strategies be terrifyingly effective! 🦇**

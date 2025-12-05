@@ -25,7 +25,7 @@
 - **Console**: Should see "New session started: session-..."
 
 ### ✅ Send Message
-- **Action**: Type "I need help creating an SOP for customer onboarding"
+- **Action**: Type "I need help creating an GTM Strategy for customer onboarding"
 - **Expected**: 
   - Your message appears in conversation area
   - AI responds with guidance
@@ -78,13 +78,13 @@ curl -X POST http://localhost:3000/api/sessions \
 curl -X POST http://localhost:3000/api/conversations/SESSION_ID/input \
   -H "Content-Type: application/json" \
   -H "Authorization: Bearer mock-valid-token" \
-  -d '{"text":"I need help creating an SOP","type":"text"}'
+  -d '{"text":"I need help creating an GTM Strategy","type":"text"}'
 ```
 
 **Expected Response**:
 ```json
 {
-  "message": "Thank you for starting to describe your workflow...",
+  "message": "Thank you for starting to describe your market strategy...",
   "requiresConfirmation": false,
   "suggestedActions": ["Describe the main steps", "..."],
   "shouldReadAloud": true,

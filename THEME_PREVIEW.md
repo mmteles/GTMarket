@@ -80,12 +80,12 @@ The MarketHero Halloween theme is now live! Visit:
 │ 🦇 MarketHero    🏚️ 🕷️ 👁️           │
 ├──────────────────────────────────────────┤
 │                                          │
-│   🎃 Conjure SOPs with Dark AI Magic 🦇 │
+│   🎃 Conjure GTM Strategies with Dark AI Magic 🦇 │
 │                                          │
-│   Whisper your workflow into the         │
+│   Whisper your market strategy into the         │
 │   darkness, and watch as MarketHero      │
 │   summons a terrifyingly comprehensive   │
-│   SOP...                                 │
+│   GTM Strategy...                                 │
 │                                          │
 │  ┌────────────────────────────────────┐ │
 │  │ 👻 You                             │ │
@@ -97,7 +97,7 @@ The MarketHero Halloween theme is now live! Visit:
 │  │ I shall help you document...       │ │
 │  └────────────────────────────────────┘ │
 │                                          │
-│  [📜 Generate SOP]                      │
+│  [📜 Generate GTM Strategy]                      │
 │                                          │
 ├──────────────────────────────────────────┤
 │ [Type or speak 🦇] [➤]                  │
@@ -208,7 +208,7 @@ The theme adapts to all screen sizes:
 - [x] Buttons have glow effects
 - [x] Input fields have focus glow
 - [x] Status indicators glow
-- [x] Build process succeeds
+- [x] Build market approach succeeds
 
 ## Performance Metrics
 

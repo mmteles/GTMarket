@@ -82,7 +82,7 @@ All pages now have the Halloween theme:
    - Spooky error messages
    - Glowing data tables
 
-4. **SOP Viewer** (`/sop-view.html`)
+4. **GTM Strategy Viewer** (`/gtm-view.html`)
    - Ancient scroll design
    - Dark document layout
    - Orange section headers
@@ -243,7 +243,7 @@ Having issues? Check:
 
 ---
 
-## 🎃 Ready to Create Spooky SOPs? 🦇
+## 🎃 Ready to Create Spooky GTM Strategies? 🦇
 
 Start the server and visit http://localhost:3000
 

@@ -1,16 +1,16 @@
 # 🦇 MarketHero (GTMarket) 🎃
 
-**MarketHero** is an AI-powered SOP (Standard Operating Procedure) generator with a spooky Halloween theme! Transform your Go-To-Market strategies into comprehensive documentation with the help of dark AI magic.
+**MarketHero** is an AI-powered GTM Strategy (Go-To-Market Strategy) generator with a spooky Halloween theme! Transform your Go-To-Market strategies into comprehensive GTM strategies with the help of dark AI magic.
 
 > 🎃 **Halloween Special Edition**: Now featuring a complete Halloween makeover with black & orange colors, bat-winged logo, spooky fonts, and glowing effects!
 
 ## ✨ Features
 
 ### Core Functionality
-- 🧛 **AI-Powered Conversations**: Chat with a vampire AI assistant to document your workflows
-- 📜 **SOP Generation**: Automatically create comprehensive Standard Operating Procedures
-- 🦇 **Voice Input**: Speak your workflows using voice recognition (with blood-red recording pulse!)
-- 📤 **Multi-Format Export**: Export SOPs as PDF, DOCX, or Agent.MD format
+- 🧛 **AI-Powered Conversations**: Chat with a vampire AI assistant to document your market strategies
+- 📜 **GTM Strategy Generation**: Automatically create comprehensive Go-To-Market Strategys
+- 🦇 **Voice Input**: Speak your market strategies using voice recognition (with blood-red recording pulse!)
+- 📤 **Multi-Format Export**: Export GTM Strategies as PDF, DOCX, or Agent.MD format
 - 🔮 **Real-Time Analytics**: Monitor system health and API performance
 - 👻 **Guest Authentication**: Quick access without complex setup
 
@@ -122,7 +122,7 @@ GTMarket/
 │   │   └── services/     # Business logic
 │   ├── interfaces/       # TypeScript interfaces
 │   ├── models/           # Data models
-│   ├── services/         # Core services (AI, speech, SOP generation)
+│   ├── services/         # Core services (AI, speech, GTM strategy generation)
 │   ├── ui/               # UI components
 │   ├── utils/            # Utility functions
 │   └── index.ts          # Application entry point
@@ -134,11 +134,11 @@ GTMarket/
 │   ├── index.html               # Main chat interface
 │   ├── dashboard.html           # System monitoring
 │   ├── api-dashboard-new.html   # API logs viewer
-│   └── sop-view.html            # SOP document viewer
+│   └── gtm-view.html            # GTM Strategy document viewer
 ├── netlify/
 │   └── functions/        # Netlify serverless functions
 ├── dist/                 # Compiled TypeScript output
-├── exports/              # Generated SOP exports
+├── exports/              # Generated GTM Strategy exports
 └── docs/                 # Documentation
 ```
 
@@ -172,7 +172,7 @@ Want to modify the Halloween theme or create your own?
 
 ## 🌟 Key Technologies
 
-- **AI**: Google Gemini for intelligent conversation and SOP generation
+- **AI**: Google Gemini for intelligent conversation and GTM strategy generation
 - **Speech**: Google Cloud Speech-to-Text & Text-to-Speech
 - **Backend**: Node.js, Express, TypeScript
 - **Frontend**: HTML5, CSS3, JavaScript (ES6+)

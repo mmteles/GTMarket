@@ -51,7 +51,7 @@ This guide walks you through deploying the V_secondguess project to Vercel.
    CORS_ORIGIN=*
    
    CONVERSATION_MODEL=gpt-4
-   SOP_MODEL=gpt-4
+   GTM Strategy_MODEL=gpt-4
    MAX_TOKENS=4000
    AI_TEMPERATURE=0.7
    ```
@@ -155,7 +155,7 @@ After deployment, your API will be available at:
 ```
 https://your-app.vercel.app/api/session
 https://your-app.vercel.app/api/conversation
-https://your-app.vercel.app/api/sop
+https://your-app.vercel.app/api/gtm
 https://your-app.vercel.app/api/monitoring
 https://your-app.vercel.app/api/dashboard
 ```
