@@ -32,6 +32,11 @@
   status = 200
 
 [[redirects]]
+  from = "/api/gtms/*/export"
+  to = "/.netlify/functions/sop-export"
+  status = 200
+
+[[redirects]]
   from = "/api/monitoring/dashboard"
   to = "/.netlify/functions/monitoring-dashboard"
   status = 200
