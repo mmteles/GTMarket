@@ -1476,7 +1476,7 @@
             
             if (status === 'connected') {
                 dot.style.background = '#10b981';
-            } else if (status === 'market approaching') {
+            } else if (status === 'Processing') {
                 dot.style.background = '#f59e0b';
             } else {
                 dot.style.background = '#ef4444';
@@ -1714,13 +1714,13 @@
                 // Create blob from chunks
                 const audioBlob = new Blob(audioChunks, { type: 'audio/webm' });
                 
-                console.log('market approaching audio:', {
+                console.log('Processing audio:', {
                     size: audioBlob.size,
                     type: audioBlob.type
                 });
                 
-                // Show market approaching message
-                addSystemMessage('🎤 market approaching your voice input...');
+                // Show Processing message
+                addSystemMessage('🎤 Processing your voice input...');
                 
                 // Use mock transcription for fallback
                 // In production, this would call a free API like Vosk or Whisper

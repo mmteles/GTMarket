@@ -1,5 +1,4 @@
 /* 🎃 SCARY Halloween Theme - MarketHero 🦇 */
-@import url('https://fonts.googleapis.com/css2?family=Creepster&family=Nosifer&family=Butcherman&family=Eater&display=swap');
 
 :root {
     --halloween-black: #000000;
@@ -23,7 +22,7 @@
 }
 
 body {
-    font-family: 'Butcherman', cursive, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Arial', 'Helvetica', sans-serif;
     background: var(--halloween-black) !important;
     color: #ffffff !important;
     line-height: 1.8;
@@ -80,7 +79,7 @@ html {
 }
 
 .logo {
-    font-family: 'Impact', 'Arial Black', sans-serif;
+    font-family: 'Impact', 'Arial Black', 'Helvetica', sans-serif;
     font-size: 4rem;
     font-weight: 900;
     color: var(--halloween-orange);
@@ -156,7 +155,7 @@ html {
 }
 
 .welcome h1 {
-    font-family: 'Nosifer', cursive;
+    font-family: 'Impact', 'Arial Black', sans-serif;
     font-size: 5rem;
     font-weight: 900;
     margin-bottom: 2rem;
@@ -562,7 +561,7 @@ th, td {
 th {
     background: var(--halloween-purple) !important;
     color: #ffffff !important;
-    font-family: 'Creepster', cursive;
+    font-family: 'Impact', 'Arial Black', sans-serif;
     font-weight: 900;
     font-size: 1.2rem;
 }
