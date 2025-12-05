@@ -283,28 +283,37 @@ html {
     display: flex;
     gap: 0.75rem;
     align-items: center;
-    z-index: 100;
+    z-index: 1000 !important;
+    pointer-events: none;
+}
+
+.button-group > * {
+    pointer-events: auto !important;
 }
 
 .send-button, .mic-button {
     width: 48px;
     height: 48px;
     padding: 0;
-    border: 3px solid var(--halloween-purple);
+    border: 3px solid var(--halloween-purple) !important;
     border-radius: 10px;
-    background: linear-gradient(135deg, var(--halloween-purple) 0%, var(--halloween-black) 100%);
-    color: #ffffff;
-    cursor: pointer;
+    background: linear-gradient(135deg, var(--halloween-purple) 0%, var(--halloween-black) 100%) !important;
+    color: #ffffff !important;
+    cursor: pointer !important;
     font-size: 1.3rem;
     font-weight: 900;
     transition: all 0.3s;
     box-shadow: var(--purple-glow);
-    display: flex;
+    display: flex !important;
     align-items: center;
     justify-content: center;
     position: relative;
-    z-index: 100;
-    pointer-events: auto;
+    z-index: 1000 !important;
+    pointer-events: auto !important;
+}
+
+.send-button:hover, .mic-button:hover {
+    background: linear-gradient(135deg, var(--halloween-orange) 0%, var(--halloween-blood) 100%) !important;
 }
 
 .btn:hover, .action-btn:hover, .send-button:hover:not(:disabled), .mic-button:hover {
@@ -571,6 +580,11 @@ tr:hover {
     margin: 0 auto;
     padding: 0 1rem;
     position: relative;
+    z-index: 1;
+}
+
+.input-wrapper * {
+    pointer-events: auto;
 }
 
 /* Force black backgrounds everywhere */
