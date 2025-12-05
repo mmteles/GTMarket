@@ -76,15 +76,19 @@ The app now features a complete Halloween transformation! See:
 
 ### 🌐 Deployment Options
 
-#### Netlify (Recommended)
+#### Netlify (Recommended) ✅
+MarketHero is optimized for Netlify deployment with serverless functions already configured.
+
 ```bash
 npm run netlify:deploy
 ```
 See [NETLIFY_QUICK_START.md](./NETLIFY_QUICK_START.md) for details.
 
-#### Vercel
+#### Vercel ⚠️
+**Note**: Vercel deployment requires additional serverless function setup. The current configuration serves static files only. For full functionality including API endpoints, use Netlify or deploy to a traditional Node.js hosting platform.
+
 ```bash
-vercel deploy
+vercel deploy  # Static files only
 ```
 
 #### Local Development
